@@ -10,11 +10,15 @@ let messageEL = document.querySelector("#message-el");
 /*You can use querySelector instead of getElementsById but make
 sure to use a # or . for an id or a class as querySelector is not
 specifying that.*/
-let playerName = "Yash";
-let playerChips = 145
+
+let player = {
+   name : "Yash",
+   chips  : 145
+}
+
 
 let playerEl = document.getElementById("player-el");
-playerEl.textContent = playerName + ": $ " + playerChips;
+playerEl.textContent = player.name + ": $ " + player.chips;
 
 function getRandomCard(){
   let randomNumber = Math.floor( Math.random()* 13 ) + 1;
