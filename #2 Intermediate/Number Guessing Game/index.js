@@ -1,9 +1,11 @@
 let message = "";
 let randomNumber1;
 
-
 const inputEl = document.getElementById("input-el");
-console.log(inputEl);
+if(inputEl.value < 0)
+{
+  alert("Please pick a number between 1 to 100")
+}
 
 let messageEL = document.getElementById("message-el");
 console.log(messageEL);
