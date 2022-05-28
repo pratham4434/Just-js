@@ -29,3 +29,19 @@ console.log("Callbacks Function");
 
  enrollStudent(newStudent, getStudents);
 //  getStudent();
+
+
+///////////////////////////////////////////////////////////////////////////
+// ul class people wala callback part frm net ninja
+
+// get a reference to ul
+ const ul = document.querySelector(".people");
+ const people = ['mario','luigi','ryu','shaun','chun-li'];
+
+ let html = ``;
+
+ people.forEach(function(person){
+    html += `<li style="color: purple">${person}</li>`
+ });
+
+ ul.innerHTML = html;
