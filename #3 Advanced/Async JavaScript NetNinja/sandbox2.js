@@ -50,8 +50,9 @@ const getTodos = (callback) => {
     request.addEventListener('readystatechange',() => {
       console.log(request, request.readyState)
         if(request.readyState === 4 && request.status === 200){
+            const data = JSON.parse(request.responseText);
             // console.log(request.responseText);
-            callback(undefined,request.responseText);
+            callback(undefined,data);
         }
         else if (request.readyState === 4){
             // console.log('Could not fetch data');
@@ -59,7 +60,9 @@ const getTodos = (callback) => {
         }
     });
     
+    // request.open('GET',"todos2.json");
     request.open('GET','https://jsonplaceholder.typicode.com/todos/');
+    
     request.send();
 }
 
